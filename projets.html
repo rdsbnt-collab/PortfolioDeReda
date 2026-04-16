@@ -7,23 +7,26 @@
     <title>Projets | Reda Sabounti</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="page-loaded">
   <div class="bg-noise"></div>
   <div class="bg-glow"></div>
 
-<nav class="nav">
-  <a href="index.html" class="nav__logo">Reda Sabounti.</a>
-  
-  <a href="index.html" class="project-page__back" aria-label="Retour à l'accueil">
-    ← Retour
-  </a>
+  <nav class="nav" aria-label="Menu principal">
+    <a href="index.html" class="nav__logo">Reda Sabounti.</a>
+    
+    <button class="nav__burger" aria-label="Menu de navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-  <ul class="nav__list">
-    <li class="nav__item"><a href="index.html#hero" class="nav__link">Accueil</a></li>
-    <li class="nav__item"><a href="index.html#projets" class="nav__link nav__link--active">Projets</a></li>
-  </ul>
-</nav>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">← Retour Accueil</a>
+      </li>
+      <li class="nav__item">
+        <a href="index.html#projets" class="nav__link nav__link--active">Projets</a>
+      </li>
+    </ul>
+  </nav>
 
   <main class="section">
     <div class="container">
