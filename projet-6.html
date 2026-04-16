@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet 6 - Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio de Reda Sabounti, étudiant en BUT MMI spécialisé en design et développement web.">
+  <title>Projet 6 - Reda Sabounti</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body class="page-loaded">
   <div class="bg-noise"></div>
   <div class="bg-glow"></div>
+
+  <nav class="nav" aria-label="Menu principal">
+    <a href="index.html" class="nav__logo">Reda Sabounti.</a>
+
+    <button class="nav__burger" aria-label="Menu de navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
+      <li class="nav__item"><a href="projets.html" class="nav__link nav__link--active">Projets</a></li>
+    </ul>
+  </nav>
 
   <main class="project-page">
     <div class="container container--narrow">
 
-      <a href="projets.html" class="project-page__back">← Retour aux projets</a>
+    <a href="projets.html" class="project-page__back" aria-label="Retour à la liste des projets">
+        ← Retour aux projets
+      </a>
 
       <header class="project-page__header">
         <h1 class="project-page__title">Projet 6</h1>
@@ -48,6 +60,18 @@ Année : 2025</p>
 
     </div>
   </main>
+ <footer class="footer">
+    &copy; 2026 - Portfolio MMI
+  </footer>
 
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const navList = document.querySelector('.nav__list');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-open');
+      navList.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', navList.classList.contains('is-open'));
+    });
+  </script>
 </body>
 </html>
