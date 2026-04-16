@@ -3,55 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Reda Sabounti, étudiant en BUT MMI spécialisé en design et développement web.">
-  <title>Projet 1 - Portfolio</title>
-
+  <meta name="description" content="Étude de cas du Projet 1 : création d'une affiche pour un festival de jazz à Ajaccio par Reda Sabounti.">
+  <title>Projet 1 - Reda Sabounti</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="page-loaded">
   <div class="bg-noise"></div>
   <div class="bg-glow"></div>
 
   <nav class="nav" aria-label="Menu principal">
-  <a href="index.html" class="nav__logo">Reda Sabounti.</a>
-  
-<button class="nav__burger" aria-label="Menu de navigation" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
-
-  <ul class="nav__list">
-    <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
-    <li class="nav__item"><a href="projets.html" class="nav__link nav__link--active">Projets</a></li>
-  </ul>
-</nav>
+    <a href="index.html" class="nav__logo">Reda Sabounti.</a>
+    <button class="nav__burger" aria-label="Menu de navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
+      <li class="nav__item"><a href="projets.html" class="nav__link nav__link--active">Projets</a></li>
+      <li class="nav__item"><a href="index.html#contact" class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
+  </nav>
 
   <main class="project-page">
     <div class="container container--narrow">
-
-  <a href="projets.html" class="project-page__back" aria-label="Retour à la liste des projets">
-  ← Retour aux projets
-</a>
+      <a href="projets.html" class="project-page__back" aria-label="Retour à la liste des projets">
+        ← Retour aux projets
+      </a>
 
       <header class="project-page__header">
         <h1 class="project-page__title">Projet 1</h1>
-        <p class="project-page__subtitle">Domaine : Design Graphique / Print
-Contexte : Projet universitaire (BUT MMI)
-Logiciel : Adobe Photoshop
-Année : 2025</p>
+        <p class="project-page__subtitle">
+          Domaine : Design Graphique / Print<br>
+          Logiciel : Adobe Photoshop<br>
+          Année : 2025
+        </p>
       </header>
 
       <section class="project-page__media">
-        <img src="imagesprojet-1.jpg" alt="Projet 1" class="project-page__img">
+        <img src="imagesprojet-1.jpg" alt="Affiche du festival de jazz d'Ajaccio" class="project-page__img">
       </section>
 
       <section class="project-page__content">
         <h2 class="project-page__section-title">Description</h2>
-        <p>Dans le cadre de ma formation en BUT MMI (Métiers du Multimédia et de l'Internet), j'ai réalisé cette affiche publicitaire pour un festival de jazz fictif se déroulant à Ajaccio. L'objectif était de maîtriser la composition visuelle et les outils de retouche avancés sur Adobe Photoshop, tout en respectant les codes graphiques d'un événement culturel de prestige. L'affiche met en avant une esthétique élégante et moderne, avec une typographie soignée et un jeu de couleurs harmonieux pour attirer l'attention du public cible. Ce projet m'a permis de développer mes compétences en design graphique, en gestion de projet créatif, ainsi qu'en communication visuelle.</p>
+        <p>Réalisation d'une affiche publicitaire pour un festival de jazz fictif. Ce projet en BUT MMI m'a permis de maîtriser la composition visuelle et les outils de retouche avancés sur Adobe Photoshop.</p>
       </section>
-
     </div>
   </main>
 
+  <footer class="footer">
+    &copy; 2026 - Portfolio MMI
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const navList = document.querySelector('.nav__list');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-open');
+      navList.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', navList.classList.contains('is-open'));
+    });
+  </script>
 </body>
 </html>
